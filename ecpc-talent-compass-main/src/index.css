@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* ECPC Enterprise Theme - Professional Blue & White */
+    --background: 0 0% 100%;
+    --foreground: 210 100% 20%;
+    
+    /* Primary - ECPC Blue */
+    --primary: 211 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 100% 35%;
+    
+    /* Dark Blue for headers */
+    --dark-blue: 210 100% 20%;
+    
+    /* Light Blue for backgrounds */
+    --light-blue: 211 100% 95%;
+    
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 20%;
+    --card-shadow: 0 0% 0%;
+    
+    /* Secondary/Muted */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 100% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 40%;
+    
+    /* Accent */
+    --accent: 211 100% 95%;
+    --accent-foreground: 211 100% 40%;
+    
+    /* Borders */
+    --border: 210 20% 80%;
+    --input: 210 20% 80%;
+    --ring: 211 100% 40%;
+    
+    /* Success/Warning/Error */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 100% 20%;
+    --sidebar-primary: 211 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 211 100% 95%;
+    --sidebar-accent-foreground: 211 100% 40%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 211 100% 40%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 20%;
+    
+    --radius: 0.5rem;
+    
+    /* Custom shadows */
+    --shadow-sm: 0 2px 8px;
+    --shadow-md: 0 4px 16px;
+    --shadow-lg: 0 8px 32px;
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold text-dark-blue;
+  }
+  
+  h2 {
+    @apply text-2xl font-bold text-dark-blue;
+  }
+  
+  h3 {
+    @apply text-lg font-bold text-dark-blue;
+  }
+}
